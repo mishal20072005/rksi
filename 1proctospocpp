@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a;
+    std::cin >> a;
+    int b = (a * 9) / 5 + 32;
+    std::cout << b;
+    return 0;
+}
