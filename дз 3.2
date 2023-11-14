@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "");
+    int x;
+    bool isEven;
+
+    cout << "Введите число: ";
+    cin >> x;
+
+    isEven = (x & 1) == 0;
+
+    if (isEven) {
+        cout << "Число является четным" << endl;
+    }
+    else {
+        cout << "Число не является четным" << endl;
+    }
+
+    return 0;
+}
