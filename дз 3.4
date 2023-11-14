@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+#define cub(X) ((X)*(X)*(X))
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    cout << "Ведите число: " << endl;
+    int a ;
+    cin >> a;
+    cout << "Куб числа " << a << " равен: " << cub(a) << endl;
+    return 0;
+}
