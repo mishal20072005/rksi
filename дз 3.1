@@ -1,0 +1,21 @@
+#include <iostream>
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int x;
+    bool powerOf2;
+    
+    std::cout << "Введите число: ";
+    std::cin >> x;
+
+    powerOf2 = (x & (x - 1)) == 0;
+
+    if (powerOf2) {
+        std::cout << "Число является степенью числа 2" << std::endl;
+    }
+    else {
+        std::cout << "Число не является степенью числа 2" << std::endl;
+    }
+
+    return 0;
+}
