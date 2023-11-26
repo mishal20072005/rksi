@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main() {
+    int arr[] = {500, 4, 24, 15, 100, 105};
+    int sum = 0;
+
+    //for 
+    for (int i = 0; i < 6; i++) {
+        sum += arr[i];
+    }
+   
+    //while 
+    int j = 0;
+    sum = 0;
+    while (j < 6) {
+        sum += arr[j];
+        j++;
+    }
+    
+    std::cout << "Suma: " << sum << std::endl;
+    return 0;
+}
