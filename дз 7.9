@@ -1,0 +1,17 @@
+#include <iostream> 
+
+int main() {
+    char stroka[] = "Aaa1323#aa";
+    char a = 'A';
+    int b = 0;
+
+    for (int i = 0; i < sizeof(stroka); i++) {
+        if (stroka[i] == a) {
+            b++;
+        }
+    }
+
+    std::cout  << b << std::endl;
+
+    return 0;
+}
