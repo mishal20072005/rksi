@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cctype>
+
+int main() {
+    char stroka[] = "aaaabbbbccccdddd";
+    int length = sizeof(stroka) - 1;
+
+    for (int i = 0; i < length; i++)
+    {
+        stroka[i] = std::toupper(stroka[i]);
+    }
+    std::cout << stroka << std::endl;
+    return 0;
+}
