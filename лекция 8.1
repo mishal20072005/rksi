@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+float multiplyOrAdd(bool a, float num1, float num2)
+{
+	if (a) {
+		return num1 * num2;
+	}
+	else {
+		return num1 + num2;
+	}
+}
+
+int main()
+{
+	bool a = true;
+	float number1 = 5.5;
+	float number2 = 3.0;
+	cout << multiplyOrAdd(a, number1, number2) << endl;
+	return 0;
+}
