@@ -1,0 +1,57 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    char operation;
+    int num1, num2;
+    double result;
+
+    std::cout << "Введите математическую операцию (+, -, *, /, !, ^): ";
+    std::cin >> operation;
+
+    std::cout << "Введите число 1: ";
+    std::cin >> num1;
+
+    if (operation != '!') {
+        std::cout << "Введите число 2: ";
+        std::cin >> num2;
+    }
+
+    switch (operation) {
+    case '+':
+        result = num1 + num2;
+        break;
+    case '-':
+        result = num1 - num2;
+        break;
+    case '*':
+        result = num1 * num2;
+        break;
+    case '/':
+        if (num2 != 0) {
+            result = static_cast<double>(num1) / num2;
+        }
+        else {
+            std::cout << "Ошибка деление на 0" << std::endl;
+            return 1;
+        }
+        break;
+    case '!':
+        result = 1;
+        for (int i = 1; i <= num1; i++) {
+            result *= i;
+        }
+        break;
+    case '^':
+        result = pow(num1, num2);
+        break;
+    default:
+        std::cout << "Нету такой операции" << std::endl;
+        return 1;
+    }
+
+    std::cout << "Ответ: " << result << std::endl;
+
+    return 0;
+}
