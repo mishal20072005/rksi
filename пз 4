@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    char operation;
+    int length;
+    char arr[1000];
+    int x;
+
+    cout << "Введите операцию ('e' - шифрование, 'd' - дешифрование): ";
+    cin >> operation;
+    cout << "Введите длину строки: ";
+    cin >> length;
+    cout << "Введите сдвиг шифра: ";
+    cin >> x;
+    cout << "Введите строку: ";
+    cin >> arr;
+
+    if (operation == 'e') {
+        for (int i = 0; i < length; i++) {
+            if (arr[i] >= 'a' && arr[i] <= 'z') {
+                arr[i] = (arr[i] + x - 'a') % 26 + 'a';
+            }
+            else if (arr[i] >= 'A' && arr[i] <= 'Z') {
+                arr[i] = (arr[i] + x - 'A') % 26 + 'A';
+            }
+        }
+    }
+    else if (operation == 'd') {
+        for (int i = 0; i < length; i++) {
+            if (arr[i] >= 'a' && arr[i] <= 'z') {
+                arr[i] = (arr[i] - x + 26) % 26 + 'a';
+            }
+            else if (arr[i] >= 'A' && arr[i] <= 'Z') {
+                arr[i] = (arr[i] - x + 26) % 26 + 'A';
+            }
+        }
+    }
+    else {
+        cout << "Неверный оператор. Завершение программы." << endl;
+        return 0;
+    }
+
+    cout << "Результат: " << arr << endl;
+
+    return 0;
+}
