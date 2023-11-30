@@ -1,0 +1,3 @@
+﻿  main.cpp
+pdcds.obj : error LNK2005: main уже определен в main.obj
+C:\Users\m9525\source\repos\pdcds\x64\Debug\pdcds.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
